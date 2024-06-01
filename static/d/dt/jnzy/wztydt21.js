@@ -1,0 +1,1 @@
+document.write("<ins class=\"adsbygoogle\"style=\"display:inline-block;width:100%;height:90px\"data-ad-client=\"ca-pub-0888257628527075\"data-ad-slot=\"6525978731\"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>")

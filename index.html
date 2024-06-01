@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="light-style layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default" data-assets-path="/r/"
+    data-template="vertical-menu-template" data-layout-type="compact">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>在线代码对比/合并工具|代码对比 - JSON中文网</title>
+    <meta content="代码对比,代码对比工具,代码合并工具,在线代码对比工具,在线代码合并工具,代码差异对比,差异代码合并" name="keywords" />
+    <meta content="在线代码对比/合并工具方便程序员查找出2段代码间的差异，并能进行合并。" name="description" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./static/r/img/favicon/favicon.ico" />
+
+    <!-- Fonts... -->
+    <link href="./static/r/css/global.css" rel="stylesheet" />
+
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="./static/r/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="./static/r/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./static/r/css/demo.css" />
+
+    <!-- header -->
+    <script src="./static/r/vendor/js/header.js"></script>
+
+    <style>
+        .card>.card-header {
+            font-size: 23px;
+        }
+
+        .card>.card-header>.logo {
+            width: 23px;
+            height: 23px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .card {
+            position: absolute;
+            inset: 0;
+            padding: 10px 10px;
+            box-sizing: border-box;
+        }
+
+
+
+        .card .main {
+            position: absolute;
+            top: 70px;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+        }
+
+        .card .main .compare-features-box {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .card-fullscreen .editor-con {
+            height: 100%;
+        }
+
+        .row-fluid {
+            height: calc(100% - 50px)
+        }
+
+        .card-fullscreen .row-fluid {
+            height: calc(100% - 10px)
+        }
+    </style>
+    <script type="text/javascript" src="./static/r/js/common/order.loadjs.js"></script>
+    <script>
+        // 动态加载 CSS 文件
+        loadCssFile("./static/r/tpl/json/code-compare/css/indexCodeMirror.min.css");
+        loadCssFile("./static/r/tpl/json/code-compare/css/merge.css");
+        PreOrderLoadJS("./static/r/tpl/json/code-compare/js/mergeCodeMirror.min.js");
+        PreOrderLoadJS("./static/r/tpl/json/code-compare/js/finddifEncode.js");
+        StartOrderLoad();
+    </script>
+    <!-- Core JS -->
+    <script src="./static/r/vendor/js/global.js"></script>
+    <script src="./static/r/js/main.js"></script>
+    <script src="./static/r/js/cards-actions.js"></script>
+</head>
+
+<body data-id="8" data-classid="280" data-tbname="tools">
+    <div class="card card-action">
+        <div class="card-header card-action pb-2">
+            <img src="./static/r/img/favicon/favicon.ico" class="logo" />
+            <h5>在线代码对比</h5>
+        </div>
+
+        <div class="main editor-con">
+            <div class="row-fluid">
+                <div class="editor-box1 compare-editor" style="margin-top: 0">
+                    <div id="view" class="CodeMirror-merge-hide-undeline"></div>
+                </div>
+            </div>
+            <!-- 功能 -->
+            <div class="compare-features-box">
+                <button type="button" class="btn btn-outline-primary me-2 mt-2" id="findDifDouble">双向</button>
+                <button type="button" class="btn btn-outline-primary me-2 mt-2" id="findDifThirty">三向</button>
+
+                <div class="form-check form-check-inline me-2 mt-2">
+                    <input class="form-check-input" type="checkbox" id="findDifShowDiff" checked>
+                    <label class="form-check-label" for="findDifShowDiff"> 显示差异 </label>
+                </div>
+
+                <div class="form-check form-check-inline me-2 mt-2">
+                    <input class="form-check-input" type="checkbox" id="findDifGapShadow" checked>
+                    <label class="form-check-label" for="findDifGapShadow"> 显示间隔阴影
+                    </label>
+                </div>
+                <div class="form-check form-check-inline me-2 mt-2">
+                    <input class="form-check-input" type="checkbox" id="showDifUndeline">
+                    <label class="form-check-label" for="showDifUndeline"> 显示差异下划线
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
